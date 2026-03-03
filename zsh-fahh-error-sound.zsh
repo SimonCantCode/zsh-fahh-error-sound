@@ -5,6 +5,8 @@ function fahh() {
 		( ffplay -nodisp -autoexit .config/zsh/plugins/zsh-fahh-error-sound/fah.mp3 > /dev/null 2>&1 &) > /dev/null
 	fi
 }
+
+# Runs just before you get your cursor back after a command basically.
 precmd(){
 	fahh
 }
