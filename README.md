@@ -5,7 +5,7 @@ Plugin for zsh that plays the Fahh sound effect whenever you get an error in the
 > I do not own the rights to the original fahh sound effect. If you sue me i will cry.
 
 ## Dependencies
-* zsh (obviously, idk if it can work on bash aswell)
+* zsh (It can also work with bash after a small modification. See comments in the code.)
 * ffmpeg (or at least ffplay)
 
 ## Installation
