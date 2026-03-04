@@ -6,7 +6,7 @@ function fahh() {
 		return
 	fi
 	if [[ $rc -ne 0 ]]; then
-		( ffplay -nodisp -autoexit .config/zsh/plugins/zsh-fahh-error-sound/fah.mp3 > /dev/null 2>&1 &) > /dev/null
+		( ffplay -nodisp -autoexit ~/.config/zsh/plugins/zsh-fahh-error-sound/fah.mp3 > /dev/null 2>&1 &) > /dev/null
 	fi
 }
 
