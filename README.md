@@ -17,3 +17,14 @@ Then add the following to your `.zshrc`:
 ```bash
 source .config/zsh/plugins/zsh-fahh-error-sound/zsh-fahh-error-sound.zsh
 ```
+
+### For neovim [code_runner](https://github.com/CRAG666/code_runner.nvim)
+Example for just python
+```lua
+python = "python3 -u $fileName || ffplay -nodisp -autoexit ~/.config/zsh/plugins/zsh-fahh-error-sound/fah.mp3 > /dev/null 2>&1",
+```
+instead of 
+```lua
+python = "python3 -u",
+```
+in the config. You get the idea.
