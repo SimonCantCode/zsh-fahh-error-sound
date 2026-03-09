@@ -19,12 +19,16 @@ source .config/zsh/plugins/zsh-fahh-error-sound/zsh-fahh-error-sound.zsh
 ```
 
 ### For neovim [code_runner](https://github.com/CRAG666/code_runner.nvim)
-Example for just python. In the config, write
 ```lua
-python = "python3 -u $fileName || ffplay -nodisp -autoexit ~/.config/zsh/plugins/zsh-fahh-error-sound/fah.mp3 > /dev/null 2>&1",
-```
-instead of 
-```lua
-python = "python3 -u",
+-- Coderunner
+local fahh = " || ffplay -nodisp -autoexit ~/.config/zsh/plugins/zsh-fahh-error-sound/fah.mp3 > /dev/null 2>&1"
+require('code_runner').setup {
+	-- Define commands for different file types
+	filetype = {
+		python = "python3 -u $fileName" .. fahh,
+		sh = "zsh $fileName" .. fahh,
+		c = "cd $dir && gcc $fileName -o /tmp/$fileNameWithoutExt && /tmp/$fileNameWithoutExt" .. fahh,
+	},
+}
 ```
 You get the idea.
